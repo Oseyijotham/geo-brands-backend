@@ -9,7 +9,7 @@ import fs from "fs/promises";
 import "dotenv/config";
 import { v2 as cloudinary } from "cloudinary";
 import sharp from "sharp";
-import { fetchPlaces, fetchCatPics, fetchMoreCatPics, fetchDogPics, fetchMoreDogPics } from "../API's/Api.js";
+import { fetchLocations, fetchCatPics, fetchMoreCatPics, fetchDogPics, fetchMoreDogPics } from "../API's/Api.js";
 
 
 const {
@@ -29,15 +29,17 @@ cloudinary.config({
 
 const findPlaces = async (req, res) => {
   const { _id } = req.user;
-  const { error } = findPlacesValidation.validate(req.body);
+  //const { error } = findPlacesValidation.validate(req.body);
 
-  if (error) {
+  /*if (error) {
     throw httpError(400, error.details[0].message);
-  }
+  }*/
 
-  const { category, country } = req.body;
+  const { brand } = req.body;
 
-  const response = await fetchPlaces(category, country);
+  const response = await fetchLocations(brand);
+
+  console.log(brand);
 
   const result = await response.json();
 

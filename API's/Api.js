@@ -67,9 +67,23 @@ export function fetchMoreDogPics(pages) {
 
 
 export function fetchPlaces(category, country) {
-  const formattedCategory = category.toLowerCase().replace(/\s+/g, "_");
+  //const formattedCategory = category.toLowerCase().replace(/\s+/g, "_");
   return fetch(
-    `https://api.overturemapsapi.com/places?country=${country}&categories=${formattedCategory}`,
+    `https://api.overturemapsapi.com/places?country=${country}&brand_name=${category}`,
+    {
+      method: "GET",
+      headers: {
+        "x-api-key": OVERTUREMAPS_API_KEY,
+        "Content-Type": "application/json",
+      },
+    }
+  );
+}
+
+
+export function fetchLocations(brand) {
+  return fetch(
+    `https://api.overturemapsapi.com/places?country=AU&brand_name=${brand}`,
     {
       method: "GET",
       headers: {
