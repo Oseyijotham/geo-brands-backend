@@ -18,7 +18,7 @@ const placesSchema = new Schema(
     avatarURL: {
       type: String,
       default:
-        "https://geo-pets-backend-qokl.onrender.com/avatars/unknownCustomer.png",
+        "https://aussie-brands-backend.onrender.com/avatars/unknownCustomer.png",
     },
     description: {
       type: String,

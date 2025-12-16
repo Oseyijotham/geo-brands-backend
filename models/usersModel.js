@@ -26,7 +26,7 @@ const userSchema = new Schema(
     avatarURL: {
       type: String,
       default:
-        "https://geo-pets-backend-qokl.onrender.com/avatars/unknownUser.png",
+        "https://aussie-brands-backend.onrender.com/avatars/unknownUser.png",
     },
     token: {
       type: String,
