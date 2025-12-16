@@ -64,6 +64,6 @@ const userSchema = new Schema(
   { versionKey: false }
 );
 
-const User = model("user", userSchema);
+const User = model("aussie-brand-user", userSchema);
 
 export { User };

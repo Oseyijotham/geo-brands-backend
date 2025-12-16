@@ -28,6 +28,6 @@ const placesSchema = new Schema(
   { versionKey: false }
 );
 
-const Place = model("place", placesSchema);
+const Place = model("aussie-brand-info", placesSchema);
 
 export { Place };
