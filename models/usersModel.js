@@ -26,7 +26,7 @@ const userSchema = new Schema(
     avatarURL: {
       type: String,
       default:
-        "https://overture-travel-manager-backend-vmhx.onrender.com/avatars/unknownUser.png",
+        "https://aussie-brands-backend-yrp3.onrender.com/avatars/unknownUser.png",
     },
     token: {
       type: String,

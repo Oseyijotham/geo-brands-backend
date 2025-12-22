@@ -18,7 +18,7 @@ const placesSchema = new Schema(
     avatarURL: {
       type: String,
       default:
-        "https://overture-travel-manager-backend-vmhx.onrender.com/avatars/unknownCustomer.png",
+        "https://aussie-brands-backend-yrp3.onrender.com/avatars/unknownCustomer.png",
     },
     description: {
       type: String,
